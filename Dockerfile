@@ -10,7 +10,7 @@ RUN pip3 install django==4.2
 
 #################Copy the file into working Directory##########
 
-COPY . .
+COPY . app/
 #################Migrate the Services #####################
 
 RUN python manage.py migrate
