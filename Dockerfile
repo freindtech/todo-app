@@ -1,9 +1,9 @@
-from python:3
+FROM python:3.12-slim
 
-run pip3 install django==4.2
+RUN pip3 install django==4.2
 
-copy . .
+COPY . .
 
-run python manage.py migrate
+RUN python manage.py migrate
 
-cmd ["python","manage.py","runserver","0.0.0.0:8000"]
+CMD ["python","manage.py","runserver","0.0.0.0:8000"]
